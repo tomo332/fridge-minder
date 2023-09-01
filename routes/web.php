@@ -28,9 +28,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+//カテゴリページを表示
 Route::get('/category', [CategoryController::class, 'view'])->name('category');
-
+//登録した食品一覧ページを表示
 Route::get('/food_item',[FoodItemController::class, 'foodview'])->name('fooditem');
+//食品追加ページを表示
+Route::get('/food_add',[FoodItemController::class, 'foodadd'])->name('foodadd');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
