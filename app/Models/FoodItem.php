@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class FoodItem extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'food_name',
+        'quantity',
+        'expiration_date',
+        'best_before_date',
+        'tag',
+        'photo_url',
+
+    ];
 }
