@@ -35,6 +35,8 @@ Route::get('/food_item',[FoodItemController::class, 'foodview'])->name('fooditem
 //食品追加ページを表示
 Route::get('/food_add',[FoodItemController::class, 'foodadd'])->name('foodadd');
 
+Route::post('/food_add',[FoodItemController::class,'store'])->name('foodstore');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
