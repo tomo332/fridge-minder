@@ -6,7 +6,8 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto px-6">
-        <form>
+        <form method="POST" action="{{ route('foodstore') }}" enctype='multipart/form-data'>
+         @csrf
             <div class="mt-8">
                 <div class="w-full flex flex-col">
                     <label for="food_name" class="font-semibold mt-4">食品名</label>
@@ -28,10 +29,10 @@
                     <input type="date" name="best_before_date" class="w-auto py-2 border border-gray-300 rounded-md" id="best_before_date">
                 </div>
 
-                <div class="w-full flex flex-col">
-                    <label for="category_id" class="font-semibold mt-4">カテゴリ</label>
-                    <input type="text" name="category_id" class="w-auto py-2 border border-gray-300 rounded-md" id="category_id">
-                </div>
+                {{-- <div class="w-full flex flex-col">
+                    <label for="category_name" class="font-semibold mt-4">カテゴリ</label>
+                    <input type="text" name="category_name" class="w-auto py-2 border border-gray-300 rounded-md" id="category_name">
+                </div> --}}
 
                 <div class="w-full flex flex-col">
                     <label for="tag" class="font-semibold mt-4">タグ</label>
