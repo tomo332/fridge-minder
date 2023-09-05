@@ -247,6 +247,9 @@ return [
         'updated_at' => '更新日',
         'username' => 'ユーザー名',
         'year' => '年',
+
+        'food_name' => '食品名',
+        'tag' => 'タグ'
     ],
 
 ];

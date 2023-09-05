@@ -16,7 +16,8 @@
             <div class="mt-8">
                 <div class="w-full flex flex-col">
                     <label for="food_name" class="font-semibold mt-4">食品名</label>
-                    <input type="text" name="food_name" class="w-auto py-2 border border-gray-300 rounded-md" id="food_name">
+                    <x-input-error :messages="$errors->get('food_name')" class="mt-2" />
+                    <input type="text" name="food_name" class="w-auto py-2 border border-gray-300 rounded-md" id="food_name" value="{{old('food_name')}}">
                 </div>
 
                 <div class="w-full flex flex-col">
@@ -41,7 +42,8 @@
 
                 <div class="w-full flex flex-col">
                     <label for="tag" class="font-semibold mt-4">タグ</label>
-                    <input type="text" name="tag" class="w-auto py-2 border border-gray-300 rounded-md" id="tag">
+                    <x-input-error :messages="$errors->get('tag')" class="mt-2" />
+                    <input type="text" name="tag" class="w-auto py-2 border border-gray-300 rounded-md" id="tag" value="{{old('tag')}}">
                 </div>
 
                 <div class="w-full flex flex-col">

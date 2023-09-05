@@ -27,6 +27,12 @@ class FoodItemController extends Controller
             'photo_url' => $request->photo_url,
         ]);
 
+        $validated = $request->validate([
+            'food_name' => 'required|max:20',
+            'tag' => 'required|max:15'
+        ]);
+
+        $post = Post::create($validated);
         return back()->with('message','保存しました');//セッションにメッセージを一時保存
     }
 }
