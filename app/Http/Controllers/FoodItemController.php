@@ -17,6 +17,7 @@ class FoodItemController extends Controller
 
     public function store(Request $request){
 
+
         $post = FoodItem::create([
             'food_name' => $request->food_name,
             'quantity' => $request->quantity,
