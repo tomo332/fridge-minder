@@ -6,6 +6,11 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto px-6">
+         @if (session('message')) {{--もしセッションの中にmessageが含まれていれば、セッションの中のmessageを表示 --}}
+            <div class="text-red-600 font-bold">
+                {{session('message')}}
+            </div>
+        @endif
         <form method="POST" action="{{ route('foodstore') }}" enctype='multipart/form-data'>
          @csrf
             <div class="mt-8">

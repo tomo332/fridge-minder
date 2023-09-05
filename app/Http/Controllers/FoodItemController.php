@@ -27,6 +27,6 @@ class FoodItemController extends Controller
             'photo_url' => $request->photo_url,
         ]);
 
-        return back();
+        return back()->with('message','保存しました');//セッションにメッセージを一時保存
     }
 }
