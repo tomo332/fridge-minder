@@ -42,4 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    //一人のUserが複数のFoodItemを持つ
+    public function fooditems(){
+        return $this->hasMany(FoodItem::class);
+    }
 }

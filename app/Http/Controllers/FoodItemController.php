@@ -8,8 +8,8 @@ use App\Models\FoodItem;
 class FoodItemController extends Controller
 {
     public function foodview(){
-        $posts=FoodItem::all();
-       return view('food_item',compact('posts'));
+        $posts=FoodItem::where('user_id', auth()->id())->get();//user_idがログインしているユーザーのidと同じFoodItemのみ取得
+       return view('food_item',compact('posts'));//食品一覧ページに表示
     }
 
     public function foodadd(){
@@ -21,8 +21,10 @@ class FoodItemController extends Controller
         $request->validate([
             'food_name' => 'required|max:20',
             'tag' => 'required|max:15',
-            'photo_url' => 'image|mimes:jpeg,png,jpg|max:2048'
+            //'photo_url' => 'image|mimes:jpeg,png,jpg|max:2048'
         ]);
+
+        $user_id = auth()->id();
 
         $fileName = time() . '.' . $request->photo_url->extension();
         $request->photo_url->storeAs('public/images', $fileName);
@@ -34,6 +36,7 @@ class FoodItemController extends Controller
         $post->best_before_date = $request->input('best_before_date');
         $post->tag = $request->input('tag');
         $post->photo_url = $fileName;
+        $post->user_id = $user_id;
         $post->save();
         // $post = FoodItem::create([
         //     'food_name' => $request->food_name,
