@@ -16,6 +16,12 @@ class FoodItem extends Model
         'best_before_date',
         'tag',
         'photo_url',
+        //'user_id',
 
     ];
+
+    //一つのFoodItemは一人のUserに紐づく
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
