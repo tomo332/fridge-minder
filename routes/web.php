@@ -36,10 +36,12 @@ Route::get('/food_item',[FoodItemController::class, 'foodview'])->name('fooditem
 Route::get('/food_add',[FoodItemController::class, 'foodadd'])->name('foodadd');
 //入力した食品をテーブルに保存
 Route::post('/food_add',[FoodItemController::class,'store'])->name('foodstore');
-//編集
+//編集用ページを表示
 Route::get('/food_edit/{post}',[FoodItemController::class, 'edit'])->name('foodedit');
-//更新
+//更新機能用ルート
 Route::put('/food_item/{post}',[FoodItemController::class, 'update'])->name('foodupdate');
+//削除機能用ルート
+Route::delete('/food_item/{post}', [FoodItemController::class, 'destroy'])->name('fooddestroy');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

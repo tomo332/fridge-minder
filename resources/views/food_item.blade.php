@@ -6,6 +6,11 @@
     </x-slot>
 
     <div class="mx-auto px-6">
+        @if (session('message'))
+            <div class="text-red-600 font-bold">
+                {{session('message')}}
+            </div>
+        @endif
         @foreach ($posts as $post)
         <div class="mt-4 p-4 bg-white w-full rounded-2xl">
             <div class="flex justify-between">
@@ -36,12 +41,19 @@
                         </tr>
                     </table>
                 </div>
-                <div class="text-right">
-                    <a href="{{route('foodedit', $post)}}">
+                <div class="text-right flex">
+                    <a href="{{route('foodedit', $post)}}" class="flex-1">
                         <x-primary-button>
                             編集
                         </x-primary-button>
                     </a>
+                    <form method="POST" action="{{route('fooddestroy', $post)}}" class="flex-2">
+                        @csrf
+                        @method('delete')
+                        <x-primary-button class="bg-red-700 ml-2">
+                            削除
+                        </x-primary-button>
+                    </form>
                 </div>
             </div>
 
