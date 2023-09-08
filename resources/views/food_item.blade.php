@@ -36,12 +36,16 @@
                         </tr>
                     </table>
                 </div>
+                <div class="text-right">
+                    <a href="{{route('foodedit', $post)}}">
+                        <x-primary-button>
+                            編集
+                        </x-primary-button>
+                    </a>
+                </div>
             </div>
 
         </div>
         @endforeach
     </div>
-
-
-
 </x-app-layout>

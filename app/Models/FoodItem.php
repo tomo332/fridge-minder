@@ -10,6 +10,7 @@ class FoodItem extends Model
     use HasFactory;
 
     protected $fillable = [
+
         'food_name',
         'quantity',
         'expiration_date',
@@ -19,6 +20,8 @@ class FoodItem extends Model
         //'user_id',
 
     ];
+
+
 
     //一つのFoodItemは一人のUserに紐づく
     public function user(){
