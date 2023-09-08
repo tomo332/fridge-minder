@@ -77,4 +77,10 @@ class FoodItemController extends Controller
         return back()->with('message','編集しました');//セッションにメッセージを一時保存
     }
 
+    public function destroy(Request $request, FoodItem $post){
+        $post->delete();
+        $request->session()->flash('message','削除しました');
+        return redirect()->route('fooditem');
+    }
+
 }
