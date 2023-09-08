@@ -34,8 +34,12 @@ Route::get('/category', [CategoryController::class, 'view'])->name('category');
 Route::get('/food_item',[FoodItemController::class, 'foodview'])->name('fooditem');
 //食品追加ページを表示
 Route::get('/food_add',[FoodItemController::class, 'foodadd'])->name('foodadd');
-
+//入力した食品をテーブルに保存
 Route::post('/food_add',[FoodItemController::class,'store'])->name('foodstore');
+//編集
+Route::get('/food_edit/{post}',[FoodItemController::class, 'edit'])->name('foodedit');
+//更新
+Route::put('/food_item/{post}',[FoodItemController::class, 'update'])->name('foodupdate');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -44,3 +48,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
