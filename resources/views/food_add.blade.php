@@ -17,22 +17,22 @@
                 <div class="w-full flex flex-col">
                     <label for="food_name" class="font-semibold mt-4">食品名</label>
                     <x-input-error :messages="$errors->get('food_name')" class="mt-2" />
-                    <input type="text" name="food_name" class="w-auto py-2 border border-gray-300 rounded-md" id="food_name" value="{{old('food_name')}}">
+                    <input type="text" name="food_name" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="food_name" value="{{old('food_name')}}">
                 </div>
 
                 <div class="w-full flex flex-col">
                     <label for="quantity" class="font-semibold mt-4">数量</label>
-                    <input type="number" name="quantity" class="w-auto py-2 border border-gray-300 rounded-md" id="quantity">
+                    <input type="number" name="quantity" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="quantity">
                 </div>
 
                 <div class="w-full flex flex-col">
                     <label for="expiration_date" class="font-semibold mt-4">消費期限</label>
-                    <input type="date" name="expiration_date" class="w-auto py-2 border border-gray-300 rounded-md" id="expiration_date">
+                    <input type="date" name="expiration_date" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="expiration_date">
                 </div>
 
                 <div class="w-full flex flex-col">
                     <label for="best_before_date" class="font-semibold mt-4">賞味期限</label>
-                    <input type="date" name="best_before_date" class="w-auto py-2 border border-gray-300 rounded-md" id="best_before_date">
+                    <input type="date" name="best_before_date" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="best_before_date">
                 </div>
 
                 {{-- <div class="w-full flex flex-col">
@@ -43,15 +43,15 @@
                 <div class="w-full flex flex-col">
                     <label for="tag" class="font-semibold mt-4">タグ</label>
                     <x-input-error :messages="$errors->get('tag')" class="mt-2" />
-                    <input type="text" name="tag" class="w-auto py-2 border border-gray-300 rounded-md" id="tag" value="{{old('tag')}}">
+                    <input type="text" name="tag" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="tag" value="{{old('tag')}}">
                 </div>
 
-                <div class="w-full flex flex-col">
-                    <label for="photo_url" class="font-semibold mt-4">写真</label>
-                    <input type="file" name="photo_url" class="w-auto py-2 border border-gray-300 rounded-md" id="photo_url">
+                <div class="w-full flex flex-col mt-4">
+                    <label for="photo_url" class="mb-1 block font-semibold text-gray-700">写真</label>
+                    <input type="file" name="photo_url" class="block w-full text-sm file:mr-4 file:rounded-md file:border-0 file:bg-gray-500 file:py-2.5 file:px-4 file:text-sm file:font-semibold file:text-white hover:file:bg-gray-700 focus:outline-none disabled:pointer-events-none disabled:opacity-60" id="photo_url">
                 </div>
 
-                <x-primary-button class="mt-4">
+                <x-primary-button class="mt-4 bg-cyan-500 hover:bg-cyan-600 ">
                     追加する
                 </x-primary-button>
 
