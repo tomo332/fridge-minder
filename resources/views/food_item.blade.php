@@ -11,8 +11,15 @@
                 {{session('message')}}
             </div>
         @endif
+        <div class="text-center ">
+            <a href="{{route('foodadd')}}">
+                <button class="mt-8 mb-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded">
+                    食品を追加
+                </button>
+            </a>
+        </div>
         @foreach ($posts as $post)
-        <div class="mt-4 p-4 bg-white w-full rounded-2xl">
+        <div class="mt-4 p-4 bg-gray-50 shadow-xl w-full rounded-2xl">
             <div class="flex justify-between">
                 <h1 class="p-4 text-lg font-semibold">
                     {{$post->food_name}}
