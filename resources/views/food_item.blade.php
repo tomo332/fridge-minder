@@ -30,7 +30,7 @@
             <div class="flex justify-between ">
                 @if ($post->photo_url)
                 <div class="p-4">
-                    <img src="{{ asset('storage/images/' . $post->photo_url) }}" alt="食品画像" class="w-32 h-32">
+                    <img src="{{ asset('storage/images/' . $post->photo_url) }}" alt="食品画像" class="w-32 h-32 rounded-lg">
                 </div>
                 @endif
 
@@ -51,7 +51,7 @@
                 </div>
                 <div class="text-right flex items-center">
                     <a href="{{route('foodedit', $post)}}" class="flex-1">
-                        <x-primary-button class="bg-slate-500 hover:bg-slate-600">
+                        <x-primary-button class="bg-green-500 hover:bg-green-600">
                             編集
                         </x-primary-button>
                     </a>
