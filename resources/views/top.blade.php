@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <header class="w-full p-9 bg-blue-100 text-gray-800 sticky top-0 flex item-center">
+    <header class="w-full p-9 bg-blue-100 bg-opacity-50 text-gray-800 sticky top-0 flex item-center">
         <h1 class="font-semibold text-2xl leading-tight">
             <a href="/">Fridge Minder</a>
         </h1>
@@ -24,12 +24,13 @@
     </header>
 
     <main>
-        <div class="text-center">
+        <div class="text-center container mx-auto px-10">
             <h1 class="text-3xl text-gray-800 font-semibold p-5">食品の管理を簡単に。</h1>
             <h2 class="text-2xl text-gray-800 font-semibold p-5">消費期限・賞味期限を一元管理し、食品ロスを削減します。</h2>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button class="my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 <a href="{{ route('register')}}" type="button" class="">新規登録はこちら</a>
             </button>
+            <img src="img/toppage.svg" class="w-full h-auto p-5 mt-5">
 
         </div>
     </main>
