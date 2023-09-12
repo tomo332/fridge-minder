@@ -15,9 +15,9 @@
                     <x-nav-link :href="route('fooditem')" :active="request()->routeIs('fooditem')">
                         食品一覧
                     </x-nav-link>
-                    <x-nav-link :href="route('foodadd')" :active="request()->routeIs('foodadd')">
+                    {{-- <x-nav-link :href="route('foodadd')" :active="request()->routeIs('foodadd')">
                         食品追加
-                    </x-nav-link>
+                    </x-nav-link> --}}
                 </div>
             </div>
 
@@ -73,9 +73,9 @@
             <x-responsive-nav-link :href="route('fooditem')" :active="request()->routeIs('fooditem')">
                 食品一覧
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('foodadd')" :active="request()->routeIs('foodadd')">
+            {{-- <x-responsive-nav-link :href="route('foodadd')" :active="request()->routeIs('foodadd')">
                 食品追加
-            </x-responsive-nav-link>
+            </x-responsive-nav-link> --}}
         </div>
 
         <!-- Responsive Settings Options -->
