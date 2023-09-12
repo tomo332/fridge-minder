@@ -23,17 +23,17 @@
 
                 <div class="w-full flex flex-col">
                     <label for="quantity" class="font-semibold mt-4">数量</label>
-                    <input type="number" name="quantity" class="w-auto py-2 border bg-gray-50 border-gray-300 shadow-sm rounded-md" id="quantity">
+                    <input type="number" name="quantity" class="w-auto py-2 border bg-gray-50 border-gray-300 shadow-sm rounded-md" id="quantity" value="{{old('quantity',$post->quantity)}}">
                 </div>
 
                 <div class="w-full flex flex-col">
                     <label for="expiration_date" class="font-semibold mt-4">消費期限</label>
-                    <input type="date" name="expiration_date" class="w-auto py-2 border bg-gray-50 border-gray-300 shadow-sm rounded-md" id="expiration_date">
+                    <input type="date" name="expiration_date" class="w-auto py-2 border bg-gray-50 border-gray-300 shadow-sm rounded-md" id="expiration_date" value="{{old('expiration_date',$post->expiration_date)}}">
                 </div>
 
                 <div class="w-full flex flex-col">
                     <label for="best_before_date" class="font-semibold mt-4">賞味期限</label>
-                    <input type="date" name="best_before_date" class="w-auto py-2 border bg-gray-50 border-gray-300 shadow-sm rounded-md" id="best_before_date">
+                    <input type="date" name="best_before_date" class="w-auto py-2 border bg-gray-50 border-gray-300 shadow-sm rounded-md" id="best_before_date" value="{{old('best_before_date',$post->best_before_date)}}">
                 </div>
 
                 {{-- <div class="w-full flex flex-col">
