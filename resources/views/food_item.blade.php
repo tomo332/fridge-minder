@@ -24,21 +24,22 @@
                 <h1 class="p-4 text-lg font-semibold">
                     {{$post->food_name}}
                 </h1>
-                <span class="p-4 font-semibold">#{{$post->tag}}</span>
+                <span class="rounded-full bg-blue-200 text-blue-700 py-2 px-3 my-3 text-sm font-semibold">#{{$post->tag}}</span>
             </div>
             <hr class="w-full">
-            <div class="flex justify-between">
+            <div class="flex justify-between ">
                 @if ($post->photo_url)
                 <div class="p-4">
                     <img src="{{ asset('storage/images/' . $post->photo_url) }}" alt="食品画像" class="w-32 h-32">
                 </div>
                 @endif
-                <p class="mt-2 p-2">
+
+                <p class="mt-2 p-2 font-semibold flex items-center">
                     {{$post->quantity}}
                 </p>
-                <div class="p-2 text-sm font-semibold">
+                <div class="p-2 text-sm font-semibold flex items-center">
                     <table>
-                        <tr>
+                        <tr class="text-orange-600">
                             <th>消費期限:</th>
                             <td>{{$post->expiration_date}}</td>
                         </tr>
@@ -48,20 +49,23 @@
                         </tr>
                     </table>
                 </div>
-                <div class="text-right flex">
+                <div class="text-right flex items-center">
                     <a href="{{route('foodedit', $post)}}" class="flex-1">
-                        <x-primary-button>
+                        <x-primary-button class="bg-slate-500 hover:bg-slate-600">
                             編集
                         </x-primary-button>
                     </a>
                     <form method="POST" action="{{route('fooddestroy', $post)}}" class="flex-2">
                         @csrf
                         @method('delete')
-                        <x-primary-button class="bg-red-700 ml-2">
+                        <x-primary-button class="bg-red-500 hover:bg-red-600 ml-2">
                             削除
                         </x-primary-button>
                     </form>
                 </div>
+
+
+
             </div>
 
         </div>
