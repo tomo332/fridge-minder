@@ -26,8 +26,13 @@ class FoodItemController extends Controller
 
         $user_id = auth()->id();
 
-        $fileName = time() . '.' . $request->photo_url->extension();
-        $request->photo_url->storeAs('public/images', $fileName);
+        //画像が追加されたらその画像を表示
+        if ($request->hasFile('photo_url')) {
+            $fileName = time() . '.' . $request->photo_url->extension();
+            $request->photo_url->storeAs('public/images', $fileName);
+        } else{//追加されなければ代わりの画像を表示
+            $fileName = 'fridgeminder.png';
+        }
 
         $post = new FoodItem;
         $post->food_name = $request->input('food_name');
