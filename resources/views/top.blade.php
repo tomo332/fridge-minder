@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <header class="w-full p-9 bg-blue-100 bg-opacity-50 text-gray-800 sticky top-0 flex item-center">
+    <header class="w-full p-9  bg-opacity-50 text-gray-800 sticky top-0 flex item-center">
         <h1 class="font-semibold text-2xl leading-tight">
             <a href="/">Fridge Minder</a>
         </h1>
@@ -22,6 +22,7 @@
             <a href="{{ route('login') }}" class="">ログイン</a>
         </nav>
     </header>
+    <hr class="w-full text-gray-400 shadow-2xl">
 
     <main>
         <div class="text-center container mx-auto px-10">
