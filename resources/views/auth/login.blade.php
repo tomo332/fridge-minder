@@ -38,13 +38,13 @@
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
-        </div>
-        <div>
+
             <x-primary-button class="ml-3">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
     </form>
+    <hr class="w-full mt-3">
 
     <div class="flex items-center justify-end mt-4">
         <a href="{{ route('login.google') }}" class="ml-3 inline-flex items-center">
