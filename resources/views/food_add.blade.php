@@ -15,7 +15,7 @@
          @csrf
             <div class="mt-8">
                 <div class="w-full flex flex-col">
-                    <label for="food_name" class="font-semibold mt-4">食品名</label>
+                    <label for="food_name" class="font-semibold mt-4">食品名<span class="text-red-600">*</span></label>
                     <x-input-error :messages="$errors->get('food_name')" class="mt-2" />
                     <input type="text" name="food_name" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="food_name" value="{{old('food_name')}}">
                 </div>
@@ -41,7 +41,7 @@
                 </div> --}}
 
                 <div class="w-full flex flex-col">
-                    <label for="tag" class="font-semibold mt-4">タグ</label>
+                    <label for="tag" class="font-semibold mt-4">タグ<span class="text-red-600">*</span></label>
                     <x-input-error :messages="$errors->get('tag')" class="mt-2" />
                     <input type="text" name="tag" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="tag" value="{{old('tag')}}">
                 </div>

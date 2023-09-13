@@ -34,7 +34,7 @@
                 </div>
                 @endif
 
-                <p class="mt-2 p-2 font-semibold flex items-center">
+                <p class="p-2 text-sm font-semibold flex items-center">
                     {{$post->quantity}}
                 </p>
                 <div class="p-2 text-sm font-semibold flex items-center">
