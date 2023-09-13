@@ -8,7 +8,22 @@ use App\Models\FoodItem;
 class FoodItemController extends Controller
 {
     public function foodview(){
-        $posts=FoodItem::where('user_id', auth()->id())->get();//user_idがログインしているユーザーのidと同じFoodItemのみ取得
+    $user_id = auth()->id();//ログインしているユーザーのIDを代入
+
+    $posts = FoodItem::where('user_id', $user_id)//user_idがログインしているユーザーのidと同じFoodItemのみ取得
+        //expiration_date,best_before_dateの両方がNULLのデータを1、それ以外(値が入っているもの)を0
+        //COALESCEでexpiration_date,best_before_dateを比較して、昇順で表示
+        //両方NULLのものは最後に表示される
+        ->orderByRaw("
+            CASE
+                WHEN expiration_date IS NULL AND best_before_date IS NULL THEN 1
+                ELSE 0
+            END,
+            COALESCE(expiration_date, best_before_date) ASC
+        ")
+        ->get();
+
+
        return view('/food_item',compact('posts'));//食品一覧ページに表示
     }
 
@@ -43,6 +58,7 @@ class FoodItemController extends Controller
         $post->photo_url = $fileName;
         $post->user_id = $user_id;
         $post->save();
+
 
         return back()->with('message','保存しました');//セッションにメッセージを一時保存
     }
