@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FoodItemController;
+use App\Http\Controllers\GoogleLoginController;
 
 
 
@@ -19,6 +20,11 @@ use App\Http\Controllers\FoodItemController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/auth/google', [GoogleLoginController::class, 'redirectToGoogle'])
+    ->name('login.google');
+
+Route::get('/auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])
+    ->name('login.google.callback');
 
 Route::get('/', function () {
     return view('top');
