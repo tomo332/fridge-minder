@@ -13,30 +13,32 @@
          </style> --}}
 </head>
 <body>
-
-    <header class="w-full p-9  bg-opacity-50 text-gray-800 sticky top-0 flex item-center">
-        <h1 class="font-semibold text-2xl leading-tight">
-            <a href="/">Fridge Minder</a>
-        </h1>
-        <nav class="font-semibold ml-auto">
-            <a href="{{ route('login') }}" class="">ログイン</a>
-        </nav>
-    </header>
-    <hr class="w-full text-gray-400 shadow-2xl">
-
-    <main>
-        <div class="text-center container mx-auto px-10">
-            <h1 class="text-3xl text-gray-800 font-semibold p-5">食品の管理を簡単に。</h1>
-            <h2 class="text-2xl text-gray-800 font-semibold p-5">消費期限・賞味期限を一元管理し、食品ロスを削減します。</h2>
-            <button class="my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                <a href="{{ route('register')}}" type="button" class="">新規登録はこちら</a>
-            </button>
-            <img src="img/toppage.svg" class="w-full h-auto p-5 mt-5">
-
-        </div>
-    </main>
+    <div class="bg-white flex flex-col min-h-screen">
+        <header class="w-full p-7 bg-gray-50  border-b-2 border-gray-100 text-gray-800  flex item-center">
+            <h1 class="font-semibold text-2xl leading-tight">
+                <a href="/">Fridge Minder</a>
+            </h1>
+            <nav class="font-semibold ml-auto">
+                <a href="{{ route('login') }}" class="text-gray-800">ログイン</a>
+            </nav>
+        </header>
 
 
+        <main class="flex-grow">
+            <div class="text-center container mx-auto px-10">
+                <h1 class="text-3xl text-gray-800 font-semibold p-5">食品の管理を簡単に。</h1>
+                <h2 class="text-2xl text-gray-800 font-semibold p-5">消費期限・賞味期限を一元管理し、食品ロスを削減します。</h2>
+                <button class="my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <a href="{{ route('register')}}" type="button" class="">新規登録はこちら</a>
+                </button>
+                <img src="img/toppage.svg" class="w-full h-auto p-5 mt-5">
+
+            </div>
+        </main>
+        <footer class="w-full p-9 bg-gray-50 text-gray-800 text-center">
+            &copy2023 FridgeMinder All Rights Reserved.
+        </footer>
+    </div>
 </body>
 </html>
 
