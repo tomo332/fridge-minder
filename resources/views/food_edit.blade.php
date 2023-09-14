@@ -7,7 +7,7 @@
 
     <div class="max-w-7xl mx-auto px-6">
          @if (session('message')) {{--もしセッションの中にmessageが含まれていれば、セッションの中のmessageを表示 --}}
-            <div class="text-red-600 font-bold">
+            <div class="text-green-500 font-semibold">
                 {{session('message')}}
             </div>
         @endif

@@ -7,7 +7,7 @@
 
     <div class="mx-auto px-6">
         @if (session('message'))
-            <div class="text-red-600 font-bold">
+            <div class="text-red-500 font-semibold">
                 {{session('message')}}
             </div>
         @endif
@@ -19,7 +19,7 @@
             </a>
         </div>
         @foreach ($posts as $post)
-        <div class="mt-4 p-4 bg-gray-50 shadow-xl w-full rounded-2xl">
+        <div class="mt-4 p-4 bg-gray-50 shadow-xl w-full rounded-2xl container">
             <div class="flex justify-between">
                 <h1 class="p-4 text-lg font-semibold">
                     {{$post->food_name}}
