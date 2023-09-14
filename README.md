@@ -31,14 +31,47 @@ FridgeMinderは｢冷蔵庫の中の食品等を管理することができるWe
 ## アプリケーションの要件
 
 ## 使用画面
-| 食品追加ボタンを押す | 追加ページに移動するので必要項目を記入する |
+
+| 1.新規登録ボタンをクリックして始める |
+----|
+| <img width="800" alt="スクリーンショット 2023-09-14 12 25 41" src="https://github.com/tomo332/fridge-minder/assets/55018402/817dfab6-a0b3-4149-b736-cc4d68e37f28"> | 
+
+| 2.新規登録画面 |3.ログイン画面 |
 ----|---- 
-| <img width="788" alt="スクリーンショット 2023-09-13 18 16 14" src="https://github.com/tomo332/fridge-minder/assets/55018402/25b3217f-4e37-4f93-99a8-8dfb029de2f3"> | TD3 |
+| <img width="800" alt="スクリーンショット 2023-09-14 12 29 09" src="https://github.com/tomo332/fridge-minder/assets/55018402/a1c160ea-b797-4c12-947f-280aa554f6b3"> | <img width="800" alt="スクリーンショット 2023-09-14 12 29 22" src="https://github.com/tomo332/fridge-minder/assets/55018402/7c71e9b9-48b0-402f-bd2a-96d0ee1d32ac"> |
+
+| 4.食品追加ボタンを押す | 5.追加ページに移動するので必要項目を記入し、追加 |
+----|---- 
+| <img width="800" alt="スクリーンショット 2023-09-13 18 16 14" src="https://github.com/tomo332/fridge-minder/assets/55018402/25b3217f-4e37-4f93-99a8-8dfb029de2f3"> | <img width="800" alt="スクリーンショット 2023-09-13 18 35 25" src="https://github.com/tomo332/fridge-minder/assets/55018402/34b44078-1b73-482f-958a-8f41613adc1a"> |
+
+| 6.上部メニューから一覧画面に移動。続けて追加も可能 | 7.追加項目は以下のように表示 |
+----|---- 
+| <img width="800" alt="スクリーンショット 2023-09-14 10 38 08" src="https://github.com/tomo332/fridge-minder/assets/55018402/359be1b2-fed6-421f-94fa-23cb1ac1aab9"> | <img width="800" alt="スクリーンショット 2023-09-14 10 45 17" src="https://github.com/tomo332/fridge-minder/assets/55018402/cf417e45-eceb-465c-ab1c-d1a23768f563">|
+
+| 8.複数追加すると期限が近いものから表示 | 9.削除・編集も可能。編集する場合、編集ページに移動 |
+----|---- 
+| <img width="800" alt="スクリーンショット 2023-09-14 11 10 09" src="https://github.com/tomo332/fridge-minder/assets/55018402/4172ea14-f38b-47ad-b8fb-2f8fcbc54b8b"> | <img width="800" alt="スクリーンショット 2023-09-14 11 57 24" src="https://github.com/tomo332/fridge-minder/assets/55018402/ac46d99a-9e75-4bf8-a375-33451719ffc0"> |
+
+| 10.追加時同様、項目を記入して編集 | 11.反映されていることが確認できる |
+----|---- 
+|<img width="800" alt="スクリーンショット 2023-09-14 12 03 22" src="https://github.com/tomo332/fridge-minder/assets/55018402/8bf90e0b-a659-4dce-b3b8-8e9c6b857855"> | <img width="800" alt="スクリーンショット 2023-09-14 12 11 09" src="https://github.com/tomo332/fridge-minder/assets/55018402/29e60de7-b293-4ca8-9fdb-b256ab438cdb"> |
+
+| 12.アカウント情報の変更、ログアウト | 
+----|
+| <img width="800" alt="スクリーンショット 2023-09-14 14 16 55" src="https://github.com/tomo332/fridge-minder/assets/55018402/969afb82-2b6c-4636-a3f7-cbdd8d100a55">|
+
 
 ## 実装予定の機能
+- 食品アイテムをカテゴリ（野菜、肉類、乳製品など）で分類し、表示できる機能。
+- 賞味期限・消費期限が切れた食品アイテムを表示する機能。
+- 賞味期限・消費期限が近づいた食品アイテムに対して通知を送る機能。
+- レスポンシブデザインの実装
 
-## データベース設計
 
-## 画面遷移図
+## 使用技術
 
-## 開発環境
+- HTML/CSS
+- tailwindcss
+- PHP/Laravel/Laravel Sail/Laravel Breeze/Laravel Socialite
+- GitHub
+- phpmyadmin
