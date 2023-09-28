@@ -15,9 +15,9 @@ class FoodItem extends Model
         'quantity',
         'expiration_date',
         'best_before_date',
-        'tag',
         'photo_url',
-        //'user_id',
+        'user_id',
+        'category_id'
 
     ];
 
@@ -26,5 +26,9 @@ class FoodItem extends Model
     //一つのFoodItemは一人のUserに紐づく
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class,'category_id');
     }
 }
