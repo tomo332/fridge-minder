@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FoodItem;
+use App\Models\Category;
 
 class FoodItemController extends Controller
 {
@@ -31,11 +32,17 @@ class FoodItemController extends Controller
         return view('/food_add');
     }
 
+    //カテゴリのプルダウン
+    public function create(){
+       $categories = Category::pluck('category_name','id');
+       return view('food_add', compact('categories'));
+    }
+
     public function store(Request $request){
 
         $request->validate([
             'food_name' => 'required|max:20',
-            'tag' => 'required|max:15',
+            'category_id' => 'required',
             //'photo_url' => 'image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
@@ -54,7 +61,7 @@ class FoodItemController extends Controller
         $post->quantity = $request->input('quantity');
         $post->expiration_date = $request->input('expiration_date');
         $post->best_before_date = $request->input('best_before_date');
-        $post->tag = $request->input('tag');
+        $post->category_id = $request->input('category_id');
         $post->photo_url = $fileName;
         $post->user_id = $user_id;
         $post->save();
@@ -64,12 +71,13 @@ class FoodItemController extends Controller
     }
 
     public function edit(FoodItem $post){
-        return view('/food_edit', compact('post'));
+        $categories = Category::pluck('category_name','id');
+        return view('/food_edit', compact('post','categories'));
     }
     public function update(Request $request, FoodItem $post){
         $request->validate([
             'food_name' => 'required|max:20',
-            'tag' => 'required|max:15',
+            'category_id' => 'required',
             //'photo_url' => 'image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
@@ -88,7 +96,7 @@ class FoodItemController extends Controller
         $post->quantity = $request->input('quantity');
         $post->expiration_date = $request->input('expiration_date');
         $post->best_before_date = $request->input('best_before_date');
-        $post->tag = $request->input('tag');
+        $post->category_id = $request->input('category_id');
         $post->user_id = $user_id;
         $post->save();
 
