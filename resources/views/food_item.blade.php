@@ -24,7 +24,7 @@
                 <h1 class="p-4 text-lg font-semibold">
                     {{$post->food_name}}
                 </h1>
-                <span class="rounded-full bg-blue-200 text-blue-700 py-2 px-3 my-3 text-sm font-semibold">#{{$post->tag}}</span>
+                <span class="rounded-full bg-blue-200 text-blue-700 py-2 px-3 my-3 text-sm font-semibold">{{$post->category->category_name}}</span>
             </div>
             <hr class="w-full">
             <div class="flex justify-between ">
