@@ -40,6 +40,8 @@ Route::get('/category', [CategoryController::class, 'view'])->name('category');
 Route::get('/food_item',[FoodItemController::class, 'foodview'])->name('fooditem');
 //食品追加ページを表示
 Route::get('/food_add',[FoodItemController::class, 'foodadd'])->name('foodadd');
+//食品追加ページにカテゴリのプルダウンを表示
+Route::get('/food_add', [FoodItemController::class, 'create'])->name('foodadd');
 //入力した食品をテーブルに保存
 Route::post('/food_add',[FoodItemController::class,'store'])->name('foodstore');
 //編集用ページを表示

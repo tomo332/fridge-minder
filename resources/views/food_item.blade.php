@@ -1,8 +1,19 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            食品一覧
-        </h2>
+        <div class="w-auto flex justify-center">
+            <form method="get" action="{{ route('fooditem') }}">
+                <select name="category" id="category" class="bg-gray-50 border border-gray-300 shadow-sm rounded-md">
+                    <option value="" disabled selected>カテゴリで絞り込む</option>
+                    <option value="reset">*絞り込み解除*</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                    @endforeach
+                </select>
+                <x-primary-button class="bg-blue-500 hover:bg-blue-600">
+                    決定
+                </x-primary-button>
+            </form>
+        </div>
     </x-slot>
 
     <div class="mx-auto px-6">
@@ -24,7 +35,7 @@
                 <h1 class="p-4 text-lg font-semibold">
                     {{$post->food_name}}
                 </h1>
-                <span class="rounded-full bg-blue-200 text-blue-700 py-2 px-3 my-3 text-sm font-semibold">#{{$post->tag}}</span>
+                <span class="rounded-full bg-blue-200 text-blue-700 py-2 px-3 my-3 text-sm font-semibold">{{$post->category->category_name}}</span>
             </div>
             <hr class="w-full">
             <div class="flex justify-between ">

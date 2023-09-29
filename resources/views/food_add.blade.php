@@ -22,28 +22,28 @@
 
                 <div class="w-full flex flex-col">
                     <label for="quantity" class="font-semibold mt-4">数量</label>
-                    <input type="number" name="quantity" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="quantity">
+                    <input type="number" name="quantity" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="quantity" value="{{old('quantity')}}">
                 </div>
 
                 <div class="w-full flex flex-col">
                     <label for="expiration_date" class="font-semibold mt-4">消費期限</label>
-                    <input type="date" name="expiration_date" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="expiration_date">
+                    <input type="date" name="expiration_date" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="expiration_date" value="{{old('expiration_date')}}">
                 </div>
 
                 <div class="w-full flex flex-col">
                     <label for="best_before_date" class="font-semibold mt-4">賞味期限</label>
-                    <input type="date" name="best_before_date" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="best_before_date">
+                    <input type="date" name="best_before_date" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="best_before_date" value="{{old('best_before_date')}}">
                 </div>
 
-                {{-- <div class="w-full flex flex-col">
-                    <label for="category_name" class="font-semibold mt-4">カテゴリ</label>
-                    <input type="text" name="category_name" class="w-auto py-2 border border-gray-300 rounded-md" id="category_name">
-                </div> --}}
-
                 <div class="w-full flex flex-col">
-                    <label for="tag" class="font-semibold mt-4">タグ<span class="text-red-600">*</span></label>
-                    <x-input-error :messages="$errors->get('tag')" class="mt-2" />
-                    <input type="text" name="tag" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="tag" value="{{old('tag')}}">
+                    <label for="category_id" class="font-semibold mt-4">カテゴリ<span class="text-red-600">*</span></label>
+                        <x-input-error :messages="$errors->get('category_id')" class="mt-2" />
+                    <select name="category_id" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="category_id" value="{{old('category_id')}}">
+                        <option value="" disabled selected>カテゴリを選択</option>
+                        @foreach ($categories as $category => $name)
+                            <option value="{{ $category }}">{{ $name }}</option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <div class="w-full flex flex-col mt-4">

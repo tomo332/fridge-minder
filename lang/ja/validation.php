@@ -249,7 +249,8 @@ return [
         'year' => '年',
 
         'food_name' => '食品名',
-        'tag' => 'タグ'
+        'tag' => 'タグ',
+        'category_id' => 'カテゴリ'
     ],
 
 ];
