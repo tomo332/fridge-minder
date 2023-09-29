@@ -39,7 +39,7 @@
                     <label for="category_id" class="font-semibold mt-4">カテゴリ<span class="text-red-600">*</span></label>
                         <x-input-error :messages="$errors->get('category_id')" class="mt-2" />
                     <select name="category_id" class="w-auto py-2 bg-gray-50 border border-gray-300 shadow-sm rounded-md" id="category_id" value="{{old('category_id')}}">
-                        <option value="">カテゴリを選択</option>
+                        <option value="" disabled selected>カテゴリを選択</option>
                         @foreach ($categories as $category => $name)
                             <option value="{{ $category }}">{{ $name }}</option>
                         @endforeach
