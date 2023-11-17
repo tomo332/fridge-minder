@@ -51,7 +51,7 @@
                     <input type="file" name="photo_url" class="block w-full text-sm file:mr-4 file:rounded-md file:border-0 file:bg-gray-500 file:py-2.5 file:px-4 file:text-sm file:font-semibold file:text-white hover:file:bg-gray-700 focus:outline-none disabled:pointer-events-none disabled:opacity-60" id="photo_url">
                 </div>
 
-                <x-primary-button class="mt-4 bg-cyan-500 hover:bg-cyan-600 ">
+                <x-primary-button class="mt-4  bg-sky-500 hover:bg-sky-600 ">
                     追加する
                 </x-primary-button>
 

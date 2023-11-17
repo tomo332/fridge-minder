@@ -26,7 +26,7 @@
 
         <main class="flex-grow">
             <div class="text-center container mx-auto px-10">
-                <h1 class="text-3xl text-gray-800 font-semibold p-5">食品の管理を簡単に。</h1>
+                <h1 class="text-3xl text-gray-800 font-semibold p-5">食品管理を簡単に。</h1>
                 <h2 class="text-2xl text-gray-800 font-semibold p-5">消費期限・賞味期限を一元管理し、食品ロスを削減します。</h2>
                 <button class="my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     <a href="{{ route('register')}}" type="button" class="">新規登録はこちら</a>

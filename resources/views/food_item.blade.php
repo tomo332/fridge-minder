@@ -9,7 +9,7 @@
                         <option value="{{ $category->id }}">{{ $category->category_name }}</option>
                     @endforeach
                 </select>
-                <x-primary-button class="bg-blue-500 hover:bg-blue-600">
+                <x-primary-button >
                     決定
                 </x-primary-button>
             </form>
@@ -24,7 +24,7 @@
         @endif
         <div class="text-center ">
             <a href="{{route('foodadd')}}">
-                <button class="mt-8 mb-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded">
+                <button class="mt-8 mb-2 bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">
                     食品を追加
                 </button>
             </a>
