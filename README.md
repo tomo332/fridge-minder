@@ -6,7 +6,7 @@ FridgeMinder(フリッジマインダー)
 
 ## URL
 
-〜
+~~https://fridge-minder-eca957fecd8d.herokuapp.com/~~
 
 ## アプリケーション概要
 FridgeMinderは｢冷蔵庫の中の食品等を管理することができるWebアプリケーション｣です。
