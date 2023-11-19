@@ -1,11 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
 ## アプリケーション名
 
@@ -42,23 +34,31 @@ FridgeMinderは｢冷蔵庫の中の食品等を管理することができるWe
 
 | 4.食品追加ボタンを押す | 5.追加ページに移動するので必要項目を記入し、追加 |
 ----|---- 
-| <img width="800" alt="スクリーンショット 2023-09-13 18 16 14" src="https://github.com/tomo332/fridge-minder/assets/55018402/25b3217f-4e37-4f93-99a8-8dfb029de2f3"> | <img width="800" alt="スクリーンショット 2023-09-13 18 35 25" src="https://github.com/tomo332/fridge-minder/assets/55018402/34b44078-1b73-482f-958a-8f41613adc1a"> |
+| <img width="800" alt="スクリーンショット 2023-09-13 18 16 14" src="https://github.com/tomo332/fridge-minder/assets/55018402/25b3217f-4e37-4f93-99a8-8dfb029de2f3"> | <img width="800" alt="スクリーンショット 2023-11-17 22 46 01" src="https://github.com/tomo332/fridge-minder/assets/55018402/8cafd71d-28b3-4e8b-9c04-9bd0f6b8ee11">|
 
 | 6.上部メニューから一覧画面に移動。続けて追加も可能 | 7.追加項目は以下のように表示 |
 ----|---- 
-| <img width="800" alt="スクリーンショット 2023-09-14 10 38 08" src="https://github.com/tomo332/fridge-minder/assets/55018402/359be1b2-fed6-421f-94fa-23cb1ac1aab9"> | <img width="800" alt="スクリーンショット 2023-09-14 10 45 17" src="https://github.com/tomo332/fridge-minder/assets/55018402/cf417e45-eceb-465c-ab1c-d1a23768f563">|
+| <img width="800" alt="スクリーンショット 2023-11-17 22 45 23" src="https://github.com/tomo332/fridge-minder/assets/55018402/056aea7d-bc8b-4ad3-ac77-ca41ae2c2167">| <img width="800" alt="スクリーンショット 2023-11-17 22 46 19" src="https://github.com/tomo332/fridge-minder/assets/55018402/51bd0e0d-e684-44f2-8c4d-66e7d5817a72">|
 
 | 8.複数追加すると期限が近いものから表示 | 9.削除・編集も可能。編集する場合、編集ページに移動 |
 ----|---- 
-| <img width="800" alt="スクリーンショット 2023-09-14 11 10 09" src="https://github.com/tomo332/fridge-minder/assets/55018402/4172ea14-f38b-47ad-b8fb-2f8fcbc54b8b"> | <img width="800" alt="スクリーンショット 2023-09-14 11 57 24" src="https://github.com/tomo332/fridge-minder/assets/55018402/ac46d99a-9e75-4bf8-a375-33451719ffc0"> |
+|<img width="800" alt="スクリーンショット 2023-11-17 22 58 31" src="https://github.com/tomo332/fridge-minder/assets/55018402/f84f6e86-20a9-4d8d-8522-e70639e50ee4"> | <img width="800" alt="スクリーンショット 2023-11-17 23 03 02" src="https://github.com/tomo332/fridge-minder/assets/55018402/4ae7d9af-c0d0-4071-8e66-9a6228aff7e7"> |
 
 | 10.追加時同様、項目を記入して編集 | 11.反映されていることが確認できる |
 ----|---- 
-|<img width="800" alt="スクリーンショット 2023-09-14 12 03 22" src="https://github.com/tomo332/fridge-minder/assets/55018402/8bf90e0b-a659-4dce-b3b8-8e9c6b857855"> | <img width="800" alt="スクリーンショット 2023-09-14 12 11 09" src="https://github.com/tomo332/fridge-minder/assets/55018402/29e60de7-b293-4ca8-9fdb-b256ab438cdb"> |
+|<img width="800" alt="スクリーンショット 2023-11-17 23 05 20" src="https://github.com/tomo332/fridge-minder/assets/55018402/ee8221f2-cd27-49ff-90e8-35829364c9f3"> | <img width="800" alt="スクリーンショット 2023-11-17 23 09 19" src="https://github.com/tomo332/fridge-minder/assets/55018402/2b729103-8083-48c1-baf8-b9c86f20a94a"> |
+
+| 12.カテゴリを選択し、決定をクリックすると... | 13.選択したカテゴリの食品のみ表示される |
+----|---- 
+|<img width="800" alt="スクリーンショット 2023-11-17 23 11 56" src="https://github.com/tomo332/fridge-minder/assets/55018402/ab393874-6513-4b70-a6f7-1d5a129b811d">| <img width="800" alt="スクリーンショット 2023-11-17 23 12 47" src="https://github.com/tomo332/fridge-minder/assets/55018402/709a260c-b737-46fa-8c95-e2a6e4ed8a5c"> |
+
+| 14.｢＊絞り込み解除＊｣を選択し、決定をクリックすると...| 15.絞り込みが解除される |
+----|---- 
+|<img width="800" alt="スクリーンショット 2023-11-17 23 16 53" src="https://github.com/tomo332/fridge-minder/assets/55018402/98db8c75-9b1e-4503-920a-e54c931881f1">|<img width="800" alt="スクリーンショット 2023-11-17 23 17 22" src="https://github.com/tomo332/fridge-minder/assets/55018402/4e707d9e-c2a4-4464-999c-e762175f80f5">|
 
 | 12.アカウント情報の変更、ログアウト | 
 ----|
-| <img width="800" alt="スクリーンショット 2023-09-14 14 16 55" src="https://github.com/tomo332/fridge-minder/assets/55018402/969afb82-2b6c-4636-a3f7-cbdd8d100a55">|
+| <img width="800" alt="スクリーンショット 2023-11-17 23 21 18" src="https://github.com/tomo332/fridge-minder/assets/55018402/11ebbee4-c40e-49e4-8849-402dca0ad403">|
 
 
 ## 実装予定の機能
