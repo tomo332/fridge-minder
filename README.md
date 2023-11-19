@@ -34,7 +34,7 @@ FridgeMinderは｢冷蔵庫の中の食品等を管理することができるWe
 
 | 4.食品追加ボタンを押す | 5.追加ページに移動するので必要項目を記入し、追加 |
 ----|---- 
-| <img width="800" alt="スクリーンショット 2023-09-13 18 16 14" src="https://github.com/tomo332/fridge-minder/assets/55018402/25b3217f-4e37-4f93-99a8-8dfb029de2f3"> | <img width="800" alt="スクリーンショット 2023-11-17 22 46 01" src="https://github.com/tomo332/fridge-minder/assets/55018402/8cafd71d-28b3-4e8b-9c04-9bd0f6b8ee11">|
+| <img width="800" alt="スクリーンショット 2023-11-19 9 33 16" src="https://github.com/tomo332/fridge-minder/assets/55018402/470712ec-e0e5-4cee-83d4-75a5c2cc1447"> | <img width="800" alt="スクリーンショット 2023-11-17 22 46 01" src="https://github.com/tomo332/fridge-minder/assets/55018402/8cafd71d-28b3-4e8b-9c04-9bd0f6b8ee11">|
 
 | 6.上部メニューから一覧画面に移動。続けて追加も可能 | 7.追加項目は以下のように表示 |
 ----|---- 
@@ -56,7 +56,7 @@ FridgeMinderは｢冷蔵庫の中の食品等を管理することができるWe
 ----|---- 
 |<img width="800" alt="スクリーンショット 2023-11-17 23 16 53" src="https://github.com/tomo332/fridge-minder/assets/55018402/98db8c75-9b1e-4503-920a-e54c931881f1">|<img width="800" alt="スクリーンショット 2023-11-17 23 17 22" src="https://github.com/tomo332/fridge-minder/assets/55018402/4e707d9e-c2a4-4464-999c-e762175f80f5">|
 
-| 12.アカウント情報の変更、ログアウト | 
+| 16.アカウント情報の変更、ログアウト | 
 ----|
 | <img width="800" alt="スクリーンショット 2023-11-17 23 21 18" src="https://github.com/tomo332/fridge-minder/assets/55018402/11ebbee4-c40e-49e4-8849-402dca0ad403">|
 
@@ -72,5 +72,5 @@ FridgeMinderは｢冷蔵庫の中の食品等を管理することができるWe
 - HTML/CSS
 - tailwindcss
 - PHP/Laravel/Laravel Sail/Laravel Breeze/Laravel Socialite
-- GitHub
+- Git/GitHub
 - phpmyadmin
